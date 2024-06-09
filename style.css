@@ -1,0 +1,134 @@
+* {
+  font: inherit;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+body {
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+}
+.container {
+  max-width: 375px;
+  padding: 1.5rem;
+}
+.card {
+  background-color: hsl(216, 50%, 16%);
+  padding: 1.25rem;
+  border-radius: 20px;
+}
+.card .nft img {
+  border-radius: 10px;
+}
+.nft {
+  position: relative;
+}
+.nft:hover::before {
+  /* cursor: pointer; */
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  color: red;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0.5;
+  border-radius: 10px;
+}
+.nft:hover::after{
+  cursor: pointer;
+  position: absolute;
+  content: url("./images/icon-view.svg");
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* NFT DESCRIPTION*/
+
+.title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.title:hover{
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+.description {
+  color: hsla(0, 0%, 100%, 0.5);
+  line-height: 1.5;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.bottom .price {
+  color: hsl(178, 100%, 50%);
+}
+.bottom .timeleft {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+
+/* CREATOR SECTION */
+.creator {
+  border-top: 1px solid hsl(215, 32%, 27%);
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.creator img {
+  width: 10%;
+  outline: 2px solid white;
+  border-radius: 50%;
+}
+.creator p {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.creator p > span {
+  color: white;
+}
+.creator p > span:hover{
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
